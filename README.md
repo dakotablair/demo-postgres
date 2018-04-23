@@ -2,18 +2,22 @@
 This repository makes use of Docker to create a PostgreSQL sandbox.
 
 Start the server in the container:
+
     docker-compose up
 
 In another shell, run the client in the container:
+
     docker exec -it demo-postgres psql -U postgres
 
 Create an example table:
+
     CREATE TABLE states (
         names text,
         abbreviation text
     );
 
 Load example data:
+
     COPY states FROM '/postgres/host/states.csv' WITH CSV HEADER;
 
 ## License notice ##
