@@ -1,0 +1,10 @@
+version: "2"
+services:
+  postgres:
+    container_name: demo-postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    image: postgres
+    volumes:
+    - .:/root/host
+    - .:/postgres/host
